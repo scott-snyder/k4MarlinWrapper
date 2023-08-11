@@ -93,6 +93,11 @@ add_custom_command(
         COMMAND ${CMAKE_COMMAND} -E copy
                 ${PROJECT_SOURCE_DIR}/k4MarlinWrapper/python/k4MarlinWrapper/parseConstants.py
                 ${CMAKE_CURRENT_BINARY_DIR}/genConfDir/k4MarlinWrapper/parseConstants.py)
+add_custom_command(
+        TARGET MarlinWrapper POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy
+                ${CMAKE_SOURCE_DIR}/k4MarlinWrapper/python/k4MarlinWrapper/MarlinProcessorWrapper.py
+                ${CMAKE_CURRENT_BINARY_DIR}/genConfDir/k4MarlinWrapper/MarlinProcessorWrapper.py)
 
 # Install the example options files to share to make them easily accessible
 install(DIRECTORY ${CMAKE_CURRENT_LIST_DIR}/examples DESTINATION ${CMAKE_INSTALL_DATADIR}/${CMAKE_PROJECT_NAME})
