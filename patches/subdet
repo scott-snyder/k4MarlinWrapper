@@ -1,0 +1,7 @@
+Bottom: 9c9d32fd36a4bae3d5de4eba4055b600733ba799
+Top:    9c9d32fd36a4bae3d5de4eba4055b600733ba799
+Author: scott snyder <sss@karma>
+Date:   2023-08-11 11:18:52 -0400
+
+Update for subdet method name changes in edm4hep.
+
