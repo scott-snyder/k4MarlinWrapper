@@ -205,7 +205,7 @@ void TestE4H2L::createTracks(const int num_elements, const int subdetectorhitnum
     elem.setRadiusOfInnermostHit(float_cnt++);
 
     for (int j = 0; j < subdetectorhitnumbers; ++j) {
-      elem.addToSubDetectorHitNumbers(int_cnt++);
+      elem.addToSubdetectorHitNumbers(int_cnt++);
     }
 
     DataHandle<edm4hep::TrackerHitCollection> trackerhits_handle{m_e4h_trackerhit_name, Gaudi::DataHandle::Reader,
@@ -651,20 +651,20 @@ bool TestE4H2L::checkEDMTrackLCIOTrack(lcio::LCEventImpl* the_event, const std::
 
       // TODO Resizing in EDM4hep to LCIO conversion causes to "have" 50 hits
       if (lcio_track->getSubdetectorHitNumbers().size() == 50) {
-        for (int j = 0; j < edm_track_orig.subDetectorHitNumbers_size(); ++j) {
+        for (int j = 0; j < edm_track_orig.subdetectorHitNumbers_size(); ++j) {
           track_same =
-              track_same && (edm_track_orig.getSubDetectorHitNumbers(j) == lcio_track->getSubdetectorHitNumbers()[j]);
+              track_same && (edm_track_orig.getSubdetectorHitNumbers(j) == lcio_track->getSubdetectorHitNumbers()[j]);
         }
-        for (int j = edm_track_orig.subDetectorHitNumbers_size(); j < 50; ++j) {
+        for (int j = edm_track_orig.subdetectorHitNumbers_size(); j < 50; ++j) {
           track_same = track_same && (0 == lcio_track->getSubdetectorHitNumbers()[j]);
         }
       } else {
         track_same = track_same &&
-                     (edm_track_orig.subDetectorHitNumbers_size() == lcio_track->getSubdetectorHitNumbers().size());
+                     (edm_track_orig.subdetectorHitNumbers_size() == lcio_track->getSubdetectorHitNumbers().size());
         if (track_same) {
-          for (int j = 0; j < edm_track_orig.subDetectorHitNumbers_size(); ++j) {
+          for (int j = 0; j < edm_track_orig.subdetectorHitNumbers_size(); ++j) {
             track_same =
-                track_same && (edm_track_orig.getSubDetectorHitNumbers(j) == lcio_track->getSubdetectorHitNumbers()[j]);
+                track_same && (edm_track_orig.getSubdetectorHitNumbers(j) == lcio_track->getSubdetectorHitNumbers()[j]);
           }
         }
       }
@@ -1000,21 +1000,21 @@ bool TestE4H2L::checkEDMTrackEDMTrack(const std::vector<std::pair<uint, uint>>& 
       }
 
       // TODO Resizing in EDM4hep to LCIO conversion causes to "have" 50 hits
-      if (edm_track.subDetectorHitNumbers_size() == 50) {
-        for (int j = 0; j < edm_track_orig.subDetectorHitNumbers_size(); ++j) {
+      if (edm_track.subdetectorHitNumbers_size() == 50) {
+        for (int j = 0; j < edm_track_orig.subdetectorHitNumbers_size(); ++j) {
           track_same =
-              track_same && (edm_track_orig.getSubDetectorHitNumbers(j) == edm_track.getSubDetectorHitNumbers(j));
+              track_same && (edm_track_orig.getSubdetectorHitNumbers(j) == edm_track.getSubdetectorHitNumbers(j));
         }
-        for (int j = edm_track_orig.subDetectorHitNumbers_size(); j < 50; ++j) {
-          track_same = track_same && (0 == edm_track.getSubDetectorHitNumbers(j));
+        for (int j = edm_track_orig.subdetectorHitNumbers_size(); j < 50; ++j) {
+          track_same = track_same && (0 == edm_track.getSubdetectorHitNumbers(j));
         }
       } else {
         track_same =
-            track_same && (edm_track_orig.subDetectorHitNumbers_size() == edm_track.subDetectorHitNumbers_size());
-        if ((edm_track_orig.subDetectorHitNumbers_size() == edm_track.subDetectorHitNumbers_size())) {
-          for (int j = 0; j < edm_track_orig.subDetectorHitNumbers_size(); ++j) {
+            track_same && (edm_track_orig.subdetectorHitNumbers_size() == edm_track.subdetectorHitNumbers_size());
+        if ((edm_track_orig.subdetectorHitNumbers_size() == edm_track.subdetectorHitNumbers_size())) {
+          for (int j = 0; j < edm_track_orig.subdetectorHitNumbers_size(); ++j) {
             track_same =
-                track_same && (edm_track_orig.getSubDetectorHitNumbers(j) == edm_track.getSubDetectorHitNumbers(j));
+                track_same && (edm_track_orig.getSubdetectorHitNumbers(j) == edm_track.getSubdetectorHitNumbers(j));
           }
         }
       }
