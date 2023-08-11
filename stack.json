@@ -1,11 +1,10 @@
 {
   "version": 5,
-  "prev": "e5bbf8766ac89ba13ac716aa3f2447602bb93343",
-  "head": "c63c64c0a6d848f1e7dedf1a6df6cad8be6f3214",
+  "prev": "7a638c3c04679905bbf69f1ee68f770bb0d35d97",
+  "head": "0a067de81de52395707ada7c39fece60eda7366f",
   "applied": [
     "subdet",
-    "procwrap",
-    "refresh-temp"
+    "procwrap"
   ],
   "unapplied": [],
   "hidden": [],
@@ -14,10 +13,7 @@
       "oid": "23d2aba49a38a8f3bac11a4cb10cc57109175987"
     },
     "procwrap": {
-      "oid": "c82df47aff2ba7cca687ef27ca2c2038951e13a4"
-    },
-    "refresh-temp": {
-      "oid": "c63c64c0a6d848f1e7dedf1a6df6cad8be6f3214"
+      "oid": "0a067de81de52395707ada7c39fece60eda7366f"
     }
   }
 }
