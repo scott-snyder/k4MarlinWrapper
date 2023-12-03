@@ -140,6 +140,15 @@ StatusCode MarlinProcessorWrapper::instantiateProcessor(std::shared_ptr<marlin::
   }
   info() << "new processor " << m_processor << endmsg;
   m_processor->setName(name());
+#if 0
+  for (const std::string& p : parameters.getStringKeys()) {
+    if (!hasParameter (*m_processor, p)) {
+      error() << "Processor " << processorTypeStr << "/" << name()
+              << " does not have parameter " << p;
+      return StatusCode::FAILURE;
+    }
+  }
+#endif
   m_processor->setParameters(parameters);
   ProcessorStack().push(m_processor);
   return StatusCode::SUCCESS;
