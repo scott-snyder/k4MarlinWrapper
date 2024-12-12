@@ -52,8 +52,8 @@ StatusCode LcioEvent::execute(const EventContext&) const {
       return scStatus;
     }
 
-    IEventProcessor* evt = nullptr;
-    if (service("ApplicationMgr", evt, true).isSuccess()) {
+    SmartIF<IEventProcessor> evt { service("ApplicationMgr", true) };
+    if (evt) {
       evt->stopRun().ignore();
       evt->release();
     } else {
