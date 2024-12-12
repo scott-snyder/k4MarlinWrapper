@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2019-2024 Key4hep-Project.
+ * Copyright (c) 2019-2025 Key4hep-Project.
  *
  * This file is part of Key4hep.
  * See https://key4hep.github.io/key4hep-doc/ for further info.
@@ -304,6 +304,7 @@ StatusCode MarlinProcessorWrapper::execute(const EventContext&) const {
     error() << e.what() << endmsg;
 
     // Send stop to EventProcessor
+    SmartIF<IEventProcessor> svc { service("ApplicationMgr", true) };
     auto svc = service<IEventProcessor>("ApplicationMgr");
     if (svc) {
       svc->stopRun().ignore();
