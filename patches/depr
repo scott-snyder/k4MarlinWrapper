@@ -1,0 +1,6 @@
+Bottom: bc8fefef1b8006442e56ca5177aa32f36de5f66f
+Top:    bc8fefef1b8006442e56ca5177aa32f36de5f66f
+Author: sss <sss@karma>
+Date:   2024-12-12 09:26:55 -0500
+
+Using stand-alone service() is deprecated.  Use SmartIF.
