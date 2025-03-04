@@ -305,7 +305,6 @@ StatusCode MarlinProcessorWrapper::execute(const EventContext&) const {
 
     // Send stop to EventProcessor
     SmartIF<IEventProcessor> svc { service("ApplicationMgr", true) };
-    auto svc = service<IEventProcessor>("ApplicationMgr");
     if (svc) {
       svc->stopRun().ignore();
       svc->release();
