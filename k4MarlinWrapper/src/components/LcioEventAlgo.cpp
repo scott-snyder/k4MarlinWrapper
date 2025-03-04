@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2019-2024 Key4hep-Project.
+ * Copyright (c) 2019-2025 Key4hep-Project.
  *
  * This file is part of Key4hep.
  * See https://key4hep.github.io/key4hep-doc/ for further info.
@@ -64,7 +64,7 @@ StatusCode LcioEvent::execute(const EventContext&) const {
   // all of the algorithms for this event have finished.
   if (m_currentEvent >= m_numberOfEvents) {
     info() << "This is the last event in the input files. Stopping the run" << endmsg;
-    auto evtProcService = service<IEventProcessor>("ApplicationMgr", false);
+    SmartIF<IEventProcessor> evtProcService { service("ApplicationMgr", false) };
     if (!evtProcService) {
       fatal() << "Could not get the ApplicationMgr for stopping the run" << endmsg;
     }
