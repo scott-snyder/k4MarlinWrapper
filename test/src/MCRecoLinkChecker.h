@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2019-2024 Key4hep-Project.
+ * Copyright (c) 2019-2025 Key4hep-Project.
  *
  * This file is part of Key4hep.
  * See https://key4hep.github.io/key4hep-doc/ for further info.
@@ -36,10 +36,10 @@ public:
   StatusCode execute(const EventContext&) const;
 
 private:
-  mutable DataHandle<edm4hep::RecoMCParticleLinkCollection> m_relationCollHandle{"MCRecoTruthLinks",
+  mutable k4FWCore::DataHandle<edm4hep::RecoMCParticleLinkCollection> m_relationCollHandle{"MCRecoTruthLinks",
                                                                                  Gaudi::DataHandle::Reader, this};
-  mutable DataHandle<edm4hep::MCParticleCollection> m_mcCollHandle{"MCParticles", Gaudi::DataHandle::Reader, this};
-  mutable DataHandle<edm4hep::ReconstructedParticleCollection> m_recoCollHandle{"RecoParticles",
+  mutable k4FWCore::DataHandle<edm4hep::MCParticleCollection> m_mcCollHandle{"MCParticles", Gaudi::DataHandle::Reader, this};
+  mutable k4FWCore::DataHandle<edm4hep::ReconstructedParticleCollection> m_recoCollHandle{"RecoParticles",
                                                                                 Gaudi::DataHandle::Reader, this};
 };
 
