@@ -1,0 +1,6 @@
+Bottom: ff94881d5b67cb41ed5324c05bb77c79f4d4c9c7
+Top:    ff94881d5b67cb41ed5324c05bb77c79f4d4c9c7
+Author: sss <sss@karma>
+Date:   2025-09-05 20:43:02 -0400
+
+Missing namespace qualifiers.
