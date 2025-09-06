@@ -24,21 +24,23 @@
 
 #include <array>
 
+using namespace lcio;
+
 PseudoRecoProcessor aPseudoRecoProcessor;
 
 PseudoRecoProcessor::PseudoRecoProcessor() : marlin::Processor("PseudoRecoProcessor") {
-  registerInputCollection(lcio::LCIO::MCPARTICLE, "InputMCs", "Name of the input MCParticle collection", m_mcCollName,
+  registerInputCollection(LCIO::MCPARTICLE, "InputMCs", "Name of the input MCParticle collection", m_mcCollName,
                           std::string("MCParticles"));
 
-  registerOutputCollection(lcio::LCIO::RECONSTRUCTEDPARTICLE, "OutputRecos",
+  registerOutputCollection(LCIO::RECONSTRUCTEDPARTICLE, "OutputRecos",
                            "Name of the output ReconstructedParticle collection", m_recoCollName,
                            std::string("PseudoRecoParticles"));
 }
 
-void PseudoRecoProcessor::processEvent(lcio::LCEvent* evt) {
+void PseudoRecoProcessor::processEvent(LCEvent* evt) {
   const auto mcColl = evt->getCollection(m_mcCollName);
 
-  auto recoColl = new IMPL::LCCollectionVec(lcio::LCIO::RECONSTRUCTEDPARTICLE);
+  auto recoColl = new IMPL::LCCollectionVec(LCIO::RECONSTRUCTEDPARTICLE);
   for (int i = 0; i < mcColl->getNumberOfElements(); ++i) {
     auto mc = static_cast<EVENT::MCParticle*>(mcColl->getElementAt(i));
     auto reco = new IMPL::ReconstructedParticleImpl();
