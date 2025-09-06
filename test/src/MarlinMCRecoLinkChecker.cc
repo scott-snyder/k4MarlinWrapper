@@ -27,13 +27,15 @@
 #include <stdexcept>
 #include <string>
 
+using namespace lcio;
+
 class MarlinMCRecoLinkChecker : public marlin::Processor {
 public:
   MarlinMCRecoLinkChecker();
 
   marlin::Processor* newProcessor() final { return new MarlinMCRecoLinkChecker; }
 
-  void processEvent(lcio::LCEvent* evt) final;
+  void processEvent(LCEvent* evt) final;
 
 private:
   std::string m_mcCollName{};
@@ -42,17 +44,17 @@ private:
 };
 
 MarlinMCRecoLinkChecker::MarlinMCRecoLinkChecker() : marlin::Processor("MarlinMCRecoLinkChecker") {
-  registerInputCollection(lcio::LCIO::MCPARTICLE, "InputMCs", "Name of the input MCParticle collection", m_mcCollName,
+  registerInputCollection(LCIO::MCPARTICLE, "InputMCs", "Name of the input MCParticle collection", m_mcCollName,
                           std::string("MCParticles"));
 
-  registerInputCollection(lcio::LCIO::RECONSTRUCTEDPARTICLE, "InputRecos",
+  registerInputCollection(LCIO::RECONSTRUCTEDPARTICLE, "InputRecos",
                           "Name of the input ReconstructedParticle collection", m_recoCollName,
                           std::string("PseudoRecoParticles"));
-  registerInputCollection(lcio::LCIO::LCRELATION, "MCRecoLinks", "Name of the input Reco - MC Truth link collection",
+  registerInputCollection(LCIO::LCRELATION, "MCRecoLinks", "Name of the input Reco - MC Truth link collection",
                           m_relCollName, std::string("TrivialMCRecoLinks"));
 }
 
-void MarlinMCRecoLinkChecker::processEvent(lcio::LCEvent* evt) {
+void MarlinMCRecoLinkChecker::processEvent(LCEvent* evt) {
   const auto mcColl = evt->getCollection(m_mcCollName);
   const auto recoColl = evt->getCollection(m_recoCollName);
   const auto relColl = evt->getCollection(m_relCollName);
