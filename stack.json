@@ -1,19 +1,18 @@
 {
   "version": 5,
-  "prev": "fa3250b58fce6b5f9025e0910884ae5f2ac0dd58",
-  "head": "3e2625be62568b18b06c7910e2a02bb381cdd7f4",
+  "prev": "644cde716574ebbbd179921c83e385b2cb854d4a",
+  "head": "eec879eaf5cd2217d8d4e922c1a4b957c2d08096",
   "applied": [
     "procwrap",
     "depr",
     "dhns",
-    "danglewarn",
-    "refresh-temp"
+    "danglewarn"
   ],
   "unapplied": [],
   "hidden": [],
   "patches": {
     "danglewarn": {
-      "oid": "78e30b1c748c9b7ef506c315d4aa830376ecdf26"
+      "oid": "eec879eaf5cd2217d8d4e922c1a4b957c2d08096"
     },
     "depr": {
       "oid": "96453680d082a08f0694fdac5d905e40d80f5cd0"
@@ -23,9 +22,6 @@
     },
     "procwrap": {
       "oid": "21d8645c4c6fa4041eea958e56089dbcb5160d44"
-    },
-    "refresh-temp": {
-      "oid": "3e2625be62568b18b06c7910e2a02bb381cdd7f4"
     }
   }
 }
