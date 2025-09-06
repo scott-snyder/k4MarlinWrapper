@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2019-2024 Key4hep-Project.
+ * Copyright (c) 2019-2025 Key4hep-Project.
  *
  * This file is part of Key4hep.
  * See https://key4hep.github.io/key4hep-doc/ for further info.
@@ -33,7 +33,7 @@ public:
 
   marlin::Processor* newProcessor() final { return new MarlinMCRecoLinkChecker; }
 
-  void processEvent(LCEvent* evt) final;
+  void processEvent(lcio::LCEvent* evt) final;
 
 private:
   std::string m_mcCollName{};
@@ -42,17 +42,17 @@ private:
 };
 
 MarlinMCRecoLinkChecker::MarlinMCRecoLinkChecker() : marlin::Processor("MarlinMCRecoLinkChecker") {
-  registerInputCollection(LCIO::MCPARTICLE, "InputMCs", "Name of the input MCParticle collection", m_mcCollName,
+  registerInputCollection(lcio::LCIO::MCPARTICLE, "InputMCs", "Name of the input MCParticle collection", m_mcCollName,
                           std::string("MCParticles"));
 
-  registerInputCollection(LCIO::RECONSTRUCTEDPARTICLE, "InputRecos",
+  registerInputCollection(lcio::LCIO::RECONSTRUCTEDPARTICLE, "InputRecos",
                           "Name of the input ReconstructedParticle collection", m_recoCollName,
                           std::string("PseudoRecoParticles"));
-  registerInputCollection(LCIO::LCRELATION, "MCRecoLinks", "Name of the input Reco - MC Truth link collection",
+  registerInputCollection(lcio::LCIO::LCRELATION, "MCRecoLinks", "Name of the input Reco - MC Truth link collection",
                           m_relCollName, std::string("TrivialMCRecoLinks"));
 }
 
-void MarlinMCRecoLinkChecker::processEvent(LCEvent* evt) {
+void MarlinMCRecoLinkChecker::processEvent(lcio::LCEvent* evt) {
   const auto mcColl = evt->getCollection(m_mcCollName);
   const auto recoColl = evt->getCollection(m_recoCollName);
   const auto relColl = evt->getCollection(m_relCollName);
