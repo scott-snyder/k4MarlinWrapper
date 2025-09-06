@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2019-2024 Key4hep-Project.
+ * Copyright (c) 2019-2025 Key4hep-Project.
  *
  * This file is part of Key4hep.
  * See https://key4hep.github.io/key4hep-doc/ for further info.
@@ -27,18 +27,18 @@
 PseudoRecoProcessor aPseudoRecoProcessor;
 
 PseudoRecoProcessor::PseudoRecoProcessor() : marlin::Processor("PseudoRecoProcessor") {
-  registerInputCollection(LCIO::MCPARTICLE, "InputMCs", "Name of the input MCParticle collection", m_mcCollName,
+  registerInputCollection(lcio::LCIO::MCPARTICLE, "InputMCs", "Name of the input MCParticle collection", m_mcCollName,
                           std::string("MCParticles"));
 
-  registerOutputCollection(LCIO::RECONSTRUCTEDPARTICLE, "OutputRecos",
+  registerOutputCollection(lcio::LCIO::RECONSTRUCTEDPARTICLE, "OutputRecos",
                            "Name of the output ReconstructedParticle collection", m_recoCollName,
                            std::string("PseudoRecoParticles"));
 }
 
-void PseudoRecoProcessor::processEvent(LCEvent* evt) {
+void PseudoRecoProcessor::processEvent(lcio::LCEvent* evt) {
   const auto mcColl = evt->getCollection(m_mcCollName);
 
-  auto recoColl = new IMPL::LCCollectionVec(LCIO::RECONSTRUCTEDPARTICLE);
+  auto recoColl = new IMPL::LCCollectionVec(lcio::LCIO::RECONSTRUCTEDPARTICLE);
   for (int i = 0; i < mcColl->getNumberOfElements(); ++i) {
     auto mc = static_cast<EVENT::MCParticle*>(mcColl->getElementAt(i));
     auto reco = new IMPL::ReconstructedParticleImpl();
