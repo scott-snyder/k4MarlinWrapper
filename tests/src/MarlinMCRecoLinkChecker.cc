@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2019-2024 Key4hep-Project.
+ * Copyright (c) 2019-2025 Key4hep-Project.
  *
  * This file is part of Key4hep.
  * See https://key4hep.github.io/key4hep-doc/ for further info.
@@ -26,6 +26,8 @@
 
 #include <stdexcept>
 #include <string>
+
+using namespace lcio;
 
 class MarlinMCRecoLinkChecker : public marlin::Processor {
 public:
