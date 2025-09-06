@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2019-2024 Key4hep-Project.
+ * Copyright (c) 2019-2025 Key4hep-Project.
  *
  * This file is part of Key4hep.
  * See https://key4hep.github.io/key4hep-doc/ for further info.
@@ -29,7 +29,7 @@ public:
   /** process the event - In this case simply link MCparticle[i] with
    * ReconstructedParticle[i]
    */
-  void processEvent(LCEvent* evt) final;
+  void processEvent(lcio::LCEvent* evt) final;
 
 private:
   std::string m_mcCollName{};
