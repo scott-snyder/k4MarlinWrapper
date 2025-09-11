@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2019-2024 Key4hep-Project.
+ * Copyright (c) 2019-2025 Key4hep-Project.
  *
  * This file is part of Key4hep.
  * See https://key4hep.github.io/key4hep-doc/ for further info.
@@ -16,6 +16,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
+
 #include "k4MarlinWrapper/converters/Lcio2EDM4hep.h"
 #include "GlobalConvertedObjectsMap.h"
 #include "StoreUtils.h"
