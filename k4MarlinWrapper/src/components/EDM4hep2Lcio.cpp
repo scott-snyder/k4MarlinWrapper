@@ -16,6 +16,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
+
 #include "k4MarlinWrapper/converters/EDM4hep2Lcio.h"
 #include "StoreUtils.h"
 #include <GaudiKernel/StatusCode.h>
