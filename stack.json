@@ -1,11 +1,10 @@
 {
   "version": 5,
-  "prev": "4f9bb18b367ca681ec371587ad55a43328d2c7e7",
-  "head": "986e6edd86c0fef9869f01cd7ad37bc46f9fb6d5",
+  "prev": "742ca6cebdf56343718672e863483ac3411a143e",
+  "head": "8c47ddaf68ca8911cdc8e56b84320df1b3019d6a",
   "applied": [
     "procwrap",
     "depr",
-    "dhns",
     "danglewarn",
     "using",
     "depr2"
@@ -14,22 +13,19 @@
   "hidden": [],
   "patches": {
     "danglewarn": {
-      "oid": "a17ed717bbcb206bc67b8a75599559a67f04787d"
+      "oid": "de72d7270de0c91cb09e63ec1ce7195481e3750b"
     },
     "depr": {
       "oid": "d43e32af09c5db975d888f1a9e34138807569d6b"
     },
     "depr2": {
-      "oid": "986e6edd86c0fef9869f01cd7ad37bc46f9fb6d5"
-    },
-    "dhns": {
-      "oid": "d59ac824df17b865ecc0e1ec73c71c2387895308"
+      "oid": "8c47ddaf68ca8911cdc8e56b84320df1b3019d6a"
     },
     "procwrap": {
       "oid": "661817724ea84f9c6f8ef7a27a769e4380a85e54"
     },
     "using": {
-      "oid": "a78b57c47707a1bd6d343256531518ae8d4036aa"
+      "oid": "b418633661186d9554853b150255e85584a221b4"
     }
   }
 }
