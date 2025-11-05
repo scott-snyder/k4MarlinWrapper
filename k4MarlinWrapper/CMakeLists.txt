@@ -91,7 +91,7 @@ add_custom_command(
                 ${PROJECT_SOURCE_DIR}/k4MarlinWrapper/python/k4MarlinWrapper/parseConstants.py
                 ${CMAKE_CURRENT_BINARY_DIR}/genConfDir/k4MarlinWrapper/parseConstants.py)
 add_custom_command(
-        TARGET MarlinWrapper POST_BUILD
+        TARGET k4MarlinWrapperPlugins POST_BUILD
         COMMAND ${CMAKE_COMMAND} -E copy
                 ${CMAKE_SOURCE_DIR}/k4MarlinWrapper/python/k4MarlinWrapper/MarlinProcessorWrapper.py
                 ${CMAKE_CURRENT_BINARY_DIR}/genConfDir/k4MarlinWrapper/MarlinProcessorWrapper.py)
