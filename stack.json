@@ -1,17 +1,21 @@
 {
   "version": 5,
-  "prev": "7937018f05df93608bddb98cfb3e6b161776e7a7",
-  "head": "c4f30cae51f10955175452e3bcec607d3ffc40e4",
+  "prev": "71af3e38de32599f7bd199867e689c44ddfcecb2",
+  "head": "66c630b9d6d29a8e745005ab6e06d239537a5ddb",
   "applied": [
     "procwrap",
     "depr",
     "danglewarn",
     "using",
-    "depr2"
+    "depr2",
+    "cxx26"
   ],
   "unapplied": [],
   "hidden": [],
   "patches": {
+    "cxx26": {
+      "oid": "66c630b9d6d29a8e745005ab6e06d239537a5ddb"
+    },
     "danglewarn": {
       "oid": "d2cee00ab301014120f82f66cfd34a0b9dc7f3b8"
     },
