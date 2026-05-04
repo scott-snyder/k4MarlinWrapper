@@ -35,6 +35,7 @@
 #include "GaudiKernel/AnyDataWrapper.h"
 
 #include <memory>
+#include <format>
 
 DECLARE_COMPONENT(Lcio2EDM4hepTool);
 
@@ -81,7 +82,7 @@ void Lcio2EDM4hepTool::registerCollection(
     return;
   }
 
-  debug() << fmt::format("Adding collection '{}' ({}) to the TES", name, e4hColl->getTypeName()) << endmsg;
+  debug() << std::format("Adding collection '{}' ({}) to the TES", name, e4hColl->getTypeName()) << endmsg;
   auto wrapper = new AnyDataWrapper<std::unique_ptr<podio::CollectionBase>>(std::move(e4hColl));
   // No need to check for pre-existing collections, since we only ever end up
   // here if that is not the case
