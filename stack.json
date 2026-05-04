@@ -1,13 +1,14 @@
 {
   "version": 5,
-  "prev": "2b8a05f1b235f69e409e996b0b8febb4753b65b2",
-  "head": "76a22811610de4cce3a5a63da2feb5e9f1cc166a",
+  "prev": "880961c2d1513074a04e19146f29a9711d469494",
+  "head": "6b4710ba20c6788d9fb55cbcb364ae26a3531b30",
   "applied": [
     "procwrap",
     "depr",
     "using",
     "depr2",
-    "cxx26"
+    "cxx26",
+    "stdfmt"
   ],
   "unapplied": [],
   "hidden": [],
@@ -23,6 +24,9 @@
     },
     "procwrap": {
       "oid": "0a99191e77873e616ab36ecb4ce71ac37131201c"
+    },
+    "stdfmt": {
+      "oid": "6b4710ba20c6788d9fb55cbcb364ae26a3531b30"
     },
     "using": {
       "oid": "132b1fa83e2b3c27d971ca6b5e75d04bf422a5f0"
