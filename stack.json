@@ -1,15 +1,14 @@
 {
   "version": 5,
-  "prev": "1d61d292642ced3419c1649a93e0f3a4bafb5d38",
-  "head": "e77ef416023712d9c30af95c6a32cdc11e037672",
+  "prev": "43d55d1961601032ef3ea998842ceaee6a997145",
+  "head": "bdf9893e09d431a7d8a3b5c6bed219e00f66e6f1",
   "applied": [
     "procwrap",
     "depr",
     "using",
     "depr2",
     "cxx26",
-    "stdfmt",
-    "refresh-temp"
+    "stdfmt"
   ],
   "unapplied": [],
   "hidden": [],
@@ -26,11 +25,8 @@
     "procwrap": {
       "oid": "fb07987e405fc8646443f511e1155691022368cb"
     },
-    "refresh-temp": {
-      "oid": "e77ef416023712d9c30af95c6a32cdc11e037672"
-    },
     "stdfmt": {
-      "oid": "71bdfe972b4518368701a23aaffe5da7d97f000f"
+      "oid": "bdf9893e09d431a7d8a3b5c6bed219e00f66e6f1"
     },
     "using": {
       "oid": "cf537b3c2b707abf7a701cc38c2b062d456ada1f"
