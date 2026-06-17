@@ -1,9 +1,8 @@
 {
   "version": 5,
-  "prev": "91c8e663dbadab02f5e92c2043a48568567034ae",
-  "head": "26ff6777ed2dfa378a230015cb14135b8c6e1d1c",
-  "applied": [],
-  "unapplied": [
+  "prev": "87211e89b11e0b8a4a7c975fd5ebecd5c163e006",
+  "head": "71bdfe972b4518368701a23aaffe5da7d97f000f",
+  "applied": [
     "procwrap",
     "depr",
     "using",
@@ -11,25 +10,26 @@
     "cxx26",
     "stdfmt"
   ],
+  "unapplied": [],
   "hidden": [],
   "patches": {
     "cxx26": {
-      "oid": "76a22811610de4cce3a5a63da2feb5e9f1cc166a"
+      "oid": "251186d2430f496ff096af88b75b2aa4c61927ab"
     },
     "depr": {
-      "oid": "da1a556e7fe793f85f2603e5f2ff789d4901757a"
+      "oid": "9fbaad7ec5559d8c73b9f185e61286b41122927e"
     },
     "depr2": {
-      "oid": "e42938ed62c7f32476b6981464b763bc6c1a8258"
+      "oid": "3dbf878957e313ba0bd05160a82b234960e3c42a"
     },
     "procwrap": {
-      "oid": "0a99191e77873e616ab36ecb4ce71ac37131201c"
+      "oid": "fb07987e405fc8646443f511e1155691022368cb"
     },
     "stdfmt": {
-      "oid": "0f0d7cb9dde5531a328d60a70e2b7a7e6e00c475"
+      "oid": "71bdfe972b4518368701a23aaffe5da7d97f000f"
     },
     "using": {
-      "oid": "132b1fa83e2b3c27d971ca6b5e75d04bf422a5f0"
+      "oid": "cf537b3c2b707abf7a701cc38c2b062d456ada1f"
     }
   }
 }
