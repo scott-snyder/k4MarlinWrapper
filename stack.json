@@ -1,21 +1,17 @@
 {
   "version": 5,
-  "prev": "43d55d1961601032ef3ea998842ceaee6a997145",
-  "head": "bdf9893e09d431a7d8a3b5c6bed219e00f66e6f1",
+  "prev": "854bcb2b70f534644676d44d3c45b3bc878ca04d",
+  "head": "2624c71da4759b4cf25e12f595255206dabe0c5c",
   "applied": [
     "procwrap",
     "depr",
     "using",
     "depr2",
-    "cxx26",
     "stdfmt"
   ],
   "unapplied": [],
   "hidden": [],
   "patches": {
-    "cxx26": {
-      "oid": "251186d2430f496ff096af88b75b2aa4c61927ab"
-    },
     "depr": {
       "oid": "9fbaad7ec5559d8c73b9f185e61286b41122927e"
     },
@@ -26,7 +22,7 @@
       "oid": "fb07987e405fc8646443f511e1155691022368cb"
     },
     "stdfmt": {
-      "oid": "bdf9893e09d431a7d8a3b5c6bed219e00f66e6f1"
+      "oid": "2624c71da4759b4cf25e12f595255206dabe0c5c"
     },
     "using": {
       "oid": "cf537b3c2b707abf7a701cc38c2b062d456ada1f"
