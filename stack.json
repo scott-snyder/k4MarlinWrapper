@@ -1,8 +1,9 @@
 {
   "version": 5,
-  "prev": "b5ca1dd22d79e4107afbd68e73aa363f40ba4376",
-  "head": "0f0d7cb9dde5531a328d60a70e2b7a7e6e00c475",
-  "applied": [
+  "prev": "75ccb3f2b6937f8d63143368aa16458f025f7a3e",
+  "head": "b690ba19a8217ff0844f8613ba3dba06c7417ac8",
+  "applied": [],
+  "unapplied": [
     "procwrap",
     "depr",
     "using",
@@ -10,7 +11,6 @@
     "cxx26",
     "stdfmt"
   ],
-  "unapplied": [],
   "hidden": [],
   "patches": {
     "cxx26": {
