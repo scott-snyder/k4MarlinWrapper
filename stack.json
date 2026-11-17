@@ -1,15 +1,16 @@
 {
   "version": 5,
-  "prev": "2c2cb7c2ae97f71ee5eb4c37ea7049e159a78562",
-  "head": "80b3fd0742f3159b38ff99c24a9b8d8ae42ef7bb",
+  "prev": "4bd9eef0211627c14149388ba2136dde8d5cee89",
+  "head": "a981e1bd0ed362edae8360976d099b7203e66c1d",
   "applied": [
     "procwrap",
     "depr",
     "using",
-    "depr2",
+    "depr2"
+  ],
+  "unapplied": [
     "stdfmt"
   ],
-  "unapplied": [],
   "hidden": [],
   "patches": {
     "depr": {
