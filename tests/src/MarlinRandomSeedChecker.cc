@@ -36,7 +36,7 @@ public:
   marlin::Processor* newProcessor() final { return new MarlinRandomSeedChecker; }
 
   void init() final;
-  void processEvent(LCEvent* evt) final;
+  void processEvent(EVENT::LCEvent* evt) final;
 
 private:
   /// event number in which each seed was seen first
@@ -49,7 +49,7 @@ MarlinRandomSeedChecker::MarlinRandomSeedChecker() : marlin::Processor("MarlinRa
 
 void MarlinRandomSeedChecker::init() { marlin::Global::EVENTSEEDER->registerProcessor(this); }
 
-void MarlinRandomSeedChecker::processEvent(LCEvent* evt) {
+void MarlinRandomSeedChecker::processEvent(EVENT::LCEvent* evt) {
   const auto seed = marlin::Global::EVENTSEEDER->getSeed(this);
   streamlog_out(MESSAGE) << "Event " << evt->getEventNumber() << " (run " << evt->getRunNumber() << "): seed " << seed
                          << std::endl;
